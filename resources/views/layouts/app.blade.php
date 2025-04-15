@@ -21,9 +21,28 @@
         <!-- Swiper CSS -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
 
-        <!-- Scripts -->
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
-        @stack('styles')
+        <!-- Tailwind CSS -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            primary: '#3abad4',
+                            'primary-dark': '#12a4b7',
+                            'primary-light': '#e6f7fa',
+                        }
+                    }
+                }
+            }
+        </script>
+
+        <!-- Alpine.js -->
+        <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+        <!-- Scripts and Styles -->
+        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+        <script src="{{ asset('js/app.js') }}" defer></script>
         
         <!-- Styles -->
         <style>
@@ -377,7 +396,5 @@
         <a href="https://wa.me/c/918200409960" target="_blank" class="whatsapp-button">
             <i class="fab fa-whatsapp"></i>
         </a>
-
-        @stack('scripts')
     </body>
 </html>
